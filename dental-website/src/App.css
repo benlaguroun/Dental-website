@@ -1,0 +1,30 @@
+.jumbotron {
+  background: url('https://via.placeholder.com/1500') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.section-heading {
+  margin: 40px 0 20px;
+}
+
+.section-content {
+  margin-bottom: 40px;
+}
+.hero {
+  background-image: url('./images/hero-bg.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+}
