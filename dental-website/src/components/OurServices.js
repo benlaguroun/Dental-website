@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTooth, faSmile, faXRay, faSyringe, faStethoscope, faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 
 const services = [
-  { icon: faTooth, title: 'General Dentistry', description: 'Routine dental check-ups and treatments.' },
-  { icon: faSmile, title: 'Cosmetic Dentistry', description: 'Improving the appearance of your smile.' },
-  { icon: faXRay, title: 'X-Rays', description: 'Detailed imaging to diagnose dental issues.' },
-  { icon: faSyringe, title: 'Oral Surgery', description: 'Surgical procedures for complex dental problems.' },
-  { icon: faStethoscope, title: 'Orthodontics', description: 'Straightening teeth and correcting bites.' },
-  { icon: faHeartbeat, title: 'Emergency Care', description: 'Immediate assistance for dental emergencies.' },
+  { icon: faTooth, title: 'General Dentistry', description: 'Routine dental check-ups and treatments.', link: '/general-dentistry' },
+  { icon: faSmile, title: 'Cosmetic Dentistry', description: 'Improving the appearance of your smile.', link: '/cosmetic-dentistry' },
+  { icon: faXRay, title: 'X-Rays', description: 'Detailed imaging to diagnose dental issues.', link: '/x-rays' },
+  { icon: faSyringe, title: 'Oral Surgery', description: 'Surgical procedures for complex dental problems.', link: '/oral-surgery' },
+  { icon: faStethoscope, title: 'Orthodontics', description: 'Straightening teeth and correcting bites.', link: '/orthodontics' },
+  { icon: faHeartbeat, title: 'Emergency Care', description: 'Immediate assistance for dental emergencies.', link: '/emergency-care' },
 ];
 
 const OurServices = () => {
@@ -30,7 +31,7 @@ const OurServices = () => {
                   <h5 className="card-title">{service.title}</h5>
                   <p className="card-text text-muted">{service.description}</p>
                   <div className="mt-auto">
-                    <a href="#contact" className="btn btn-primary">Learn More</a>
+                    <Link to={service.link} className="btn btn-primary">Learn More</Link>
                   </div>
                 </div>
               </div>
