@@ -10,11 +10,6 @@ import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 import OfferPricing from './components/OfferPricing';
 import GeneralDentistry from './pages/GeneralDentistry';
-import CosmeticDentistry from './pages/CosmeticDentistry';
-import Xrays from './pages/Xrays';
-import OralSurgery from './pages/OralSurgery';
-import Orthodontics from './pages/Orthodontics';
-import EmergencyCare from './pages/EmergencyCare';
 import './App.css';
 import './custom.css';
 
@@ -24,30 +19,26 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <OurServices />
+                <Product />
+                <Testimonials />
+                <Blog />
+                <OfferPricing />
+                <ContactUs />
+                <Footer />
+              </>
+            }
+          />
           <Route path="/general-dentistry" element={<GeneralDentistry />} />
-          <Route path="/cosmetic-dentistry" element={<CosmeticDentistry />} />
-          <Route path="/x-rays" element={<Xrays />} />
-          <Route path="/oral-surgery" element={<OralSurgery />} />
-          <Route path="/orthodontics" element={<Orthodontics />} />
-          <Route path="/emergency-care" element={<EmergencyCare />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
 }
-
-const Home = () => (
-  <>
-    <Hero />
-    <OurServices />
-    <Product />
-    <Testimonials />
-    <Blog />
-    <OfferPricing />
-    <ContactUs />
-  </>
-);
 
 export default App;
