@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 import OfferPricing from './components/OfferPricing';
 import './App.css';
+import './custom.css';
 
 function App() {
   return (
