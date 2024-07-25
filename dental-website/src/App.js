@@ -13,6 +13,8 @@ import GeneralDentistry from './pages/GeneralDentistry';
 import CosmeticDentistry from './pages/CosmeticDentistry';
 import Xrays from './pages/Xrays';
 import OralSurgery from './pages/OralSurgery';
+import Orthodontics from './pages/Orthodontics';
+import EmergencyCare from './pages/EmergencyCare';
 import './App.css';
 import './custom.css';
 
@@ -41,6 +43,8 @@ function App() {
           <Route path="/cosmetic-dentistry" element={<CosmeticDentistry />} />
           <Route path="/x-rays" element={<Xrays />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
+          <Route path="/orthodontics" element={<Orthodontics />} />
+          <Route path="/emergency-care" element={<EmergencyCare />} />
         </Routes>
       </div>
     </Router>
