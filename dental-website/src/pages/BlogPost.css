@@ -1,0 +1,16 @@
+/* BlogPost.css */
+
+.container {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
