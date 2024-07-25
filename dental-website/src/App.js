@@ -12,6 +12,7 @@ import OfferPricing from './components/OfferPricing';
 import GeneralDentistry from './pages/GeneralDentistry';
 import CosmeticDentistry from './pages/CosmeticDentistry';
 import Xrays from './pages/Xrays';
+import OralSurgery from './pages/OralSurgery';
 import './App.css';
 import './custom.css';
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/general-dentistry" element={<GeneralDentistry />} />
           <Route path="/cosmetic-dentistry" element={<CosmeticDentistry />} />
           <Route path="/x-rays" element={<Xrays />} />
+          <Route path="/oral-surgery" element={<OralSurgery />} />
         </Routes>
       </div>
     </Router>
