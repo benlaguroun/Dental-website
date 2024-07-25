@@ -1,61 +1,52 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './OfferPricing.css';
+
+const offers = [
+  {
+    id: 1,
+    title: 'Basic Dental Checkup',
+    price: '$50',
+    summary: 'A comprehensive dental checkup including cleaning.',
+  },
+  {
+    id: 2,
+    title: 'Teeth Whitening',
+    price: '$120',
+    summary: 'Professional teeth whitening service to brighten your smile.',
+  },
+  {
+    id: 3,
+    title: 'Orthodontic Braces',
+    price: '$500',
+    summary: 'Full orthodontic treatment with braces for all ages.',
+  },
+];
 
 const OfferPricing = () => {
   return (
-    <Container id="pricing">
-      <h2 className="section-heading">Offer & Pricing</h2>
-      <Row>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-              <Card.Title>Basic Plan</Card.Title>
-              <Card.Text>
-                $50/month
-              </Card.Text>
-              <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-              </ul>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-              <Card.Title>Standard Plan</Card.Title>
-              <Card.Text>
-                $100/month
-              </Card.Text>
-              <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-                <li>Service 4</li>
-              </ul>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card>
-            <Card.Body>
-              <Card.Title>Premium Plan</Card.Title>
-              <Card.Text>
-                $150/month
-              </Card.Text>
-              <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-                <li>Service 4</li>
-                <li>Service 5</li>
-              </ul>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="offer-section">
+      <Container className="py-5" id="offers">
+        <h2 className="section-heading">Our Offers and Pricing</h2>
+        <Row>
+          {offers.map((offer) => (
+            <Col md={4} key={offer.id}>
+              <Card className="mb-4 offer-card">
+                <Card.Body>
+                  <Card.Title>{offer.title}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">{offer.price}</Card.Subtitle>
+                  <Card.Text>{offer.summary}</Card.Text>
+                  <Link to={`/offer/${offer.id}`}>
+                    <Button variant="primary">Learn More</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </div>
   );
 };
 

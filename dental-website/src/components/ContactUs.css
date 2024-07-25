@@ -1,0 +1,71 @@
+/* ContactUs.css */
+.contact-section {
+    background-color: #040404;
+    color: #fff;
+    padding: 4rem 0;
+  }
+  
+  .section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+  
+  .contact-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .contact-form .form-label {
+    color: #ddd;
+  }
+  
+  .contact-form .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+  }
+  
+  .contact-form .form-control::placeholder {
+    color: #bbb;
+  }
+  
+  .contact-form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-info h4 {
+    color: #ddd;
+  }
+  
+  .contact-info p {
+    color: #bbb;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form,
+    .contact-info {
+      text-align: center;
+    }
+  }
+  
