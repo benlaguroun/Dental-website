@@ -68,13 +68,13 @@ const AdminPanel = () => {
         <tbody>
           {clients.map(client => (
             <tr key={client.id}>
-              <td>{client.name}</td>
-              <td>{client.email}</td>
-              <td>{client.date}</td>
-              <td>{client.schedule}</td>
-              <td>
-                <Button variant="warning" onClick={() => handleEdit(client)}>Edit</Button>{' '}
-                <Button variant="danger" onClick={() => handleDelete(client.id)}>Delete</Button>
+              <td data-label="Name">{client.name}</td>
+              <td data-label="Email">{client.email}</td>
+              <td data-label="Date">{client.date}</td>
+              <td data-label="Schedule">{client.schedule}</td>
+              <td data-label="Actions">
+                <Button variant="warning" size="sm" onClick={() => handleEdit(client)}>Edit</Button>{' '}
+                <Button variant="danger" size="sm" onClick={() => handleDelete(client.id)}>Delete</Button>
               </td>
             </tr>
           ))}
