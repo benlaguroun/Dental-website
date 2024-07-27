@@ -20,22 +20,21 @@ const ContactUs = () => {
               </Form.Group>
               <Form.Group controlId="formMessage">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={3} />
+                <Form.Control as="textarea" rows={3} placeholder="Your message" />
               </Form.Group>
               <Button variant="primary" type="submit">
                 Submit
               </Button>
             </Form>
           </Col>
-          <Col md={6}>
-            <div className="contact-info">
-              <h4>Address</h4>
-              <p>123 Dental Street, City, Country</p>
-              <h4>Phone</h4>
-              <p>+123 456 7890</p>
-              <h4>Email</h4>
-              <p>info@dentalclinic.com</p>
-            </div>
+          <Col md={6} className="contact-info">
+            <h4>Address</h4>
+            <p>123 Dental Street, City, Country</p>
+            <h4>Phone</h4>
+            <p>+123 456 7890</p>
+            <h4>Email</h4>
+            <p>info@dentalclinic.com</p>
+           
           </Col>
         </Row>
       </Container>
