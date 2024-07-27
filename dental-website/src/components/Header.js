@@ -34,6 +34,7 @@ const Header = () => {
             <Nav.Link href="#blog">Blog</Nav.Link>
             <Nav.Link href="#pricing">Offer & Pricing</Nav.Link>
             <Nav.Link href="#contact">Contact Us</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

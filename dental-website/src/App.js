@@ -16,6 +16,8 @@ import OralSurgery from './pages/OralSurgery';
 import Orthodontics from './pages/Orthodontics';
 import EmergencyCare from './pages/EmergencyCare';
 import BlogPost from './pages/BlogPost';
+import AdminPanel from './components/AdminPanel';
+import Login from './components/Login'; // Import the Login component
 import './App.css';
 import './custom.css';
 
@@ -46,8 +48,10 @@ function App() {
           <Route path="/oral-surgery" element={<OralSurgery />} />
           <Route path="/orthodontics" element={<Orthodontics />} />
           <Route path="/emergency-care" element={<EmergencyCare />} />
-          <Route exact path="/blog" component={Blog} />
-          <Route path="/blog/:id" component={BlogPost} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,18 @@
+{
+  "clients": [
+    {
+      "id": "44f7",
+      "name": "ben",
+      "email": "ben33@gmail.com",
+      "date": "2024-07-06",
+      "schedule": "ben"
+    },
+    {
+      "id": "6aaa",
+      "name": "ben 1",
+      "email": "test@gmail.com",
+      "date": "2024-07-09",
+      "schedule": "test 1 test 1"
+    }
+  ]
+}
