@@ -41,7 +41,9 @@ const AdminPanel = () => {
       .catch(error => console.error('There was an error deleting the client!', error));
   };
 
-  const handleAdd = () => {
+  const handleAdd = (e) => {
+    e.preventDefault();
+    console.log('Adding new client:', newClient); // Debugging log
     axios.post('http://localhost:5000/clients', newClient)
       .then(response => {
         setClients([...clients, response.data]);
@@ -132,7 +134,7 @@ const AdminPanel = () => {
           <Modal.Title>Add New Schedule</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handleAdd}>
             <Form.Group controlId="formName">
               <Form.Label>Name</Form.Label>
               <Form.Control
@@ -165,12 +167,12 @@ const AdminPanel = () => {
                 onChange={(e) => setNewClient({ ...newClient, schedule: e.target.value })}
               />
             </Form.Group>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={() => setShowAddModal(false)}>Close</Button>
+              <Button variant="primary" type="submit">Add Schedule</Button>
+            </Modal.Footer>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowAddModal(false)}>Close</Button>
-          <Button variant="primary" onClick={handleAdd}>Add Schedule</Button>
-        </Modal.Footer>
       </Modal>
     </Container>
   );
