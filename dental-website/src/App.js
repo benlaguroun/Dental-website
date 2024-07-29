@@ -18,6 +18,7 @@ import EmergencyCare from './pages/EmergencyCare';
 import BlogPost from './pages/BlogPost';
 import AdminPanel from './components/AdminPanel';
 import Login from './components/Login'; // Import the Login component
+import SocialMedia from './components/SocialMedia';
 import './App.css';
 import './custom.css';
 
@@ -31,6 +32,7 @@ function App() {
             path="/"
             element={
               <>
+                <SocialMedia />
                 <Hero />
                 <OurServices />
                 <Product />
