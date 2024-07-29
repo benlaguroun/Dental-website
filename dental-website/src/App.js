@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import SocialMedia from './components/SocialMedia';
+import Schedule from './components/Schedule';
 import Hero from './components/Hero';
 import Blog from './components/Blog';
 import OurServices from './components/OurServices';
@@ -18,7 +19,8 @@ import Orthodontics from './pages/Orthodontics';
 import EmergencyCare from './pages/EmergencyCare';
 import BlogPost from './pages/BlogPost';
 import AdminPanel from './components/AdminPanel';
-import Login from './components/Login'; // Import the Login component
+import Login from './components/Login';
+import ScheduleButton from './components/ScheduleButton'; // Import the ScheduleButton component
 import './App.css';
 import './custom.css';
 
@@ -41,11 +43,13 @@ function App() {
                 <OfferPricing />
                 <ContactUs />
                 <Footer />
+                <ScheduleButton /> {/* Include the ScheduleButton component */}
               </>
             }
           />
           <Route path="/general-dentistry" element={<GeneralDentistry />} />
           <Route path="/cosmetic-dentistry" element={<CosmeticDentistry />} />
+          <Route path="/schedule" element={<Schedule />} /> {/* Corrected Route */}
           <Route path="/x-rays" element={<Xrays />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
           <Route path="/orthodontics" element={<Orthodontics />} />

@@ -37,6 +37,7 @@ const Header = () => {
             <Nav.Link href="#blog">Blog</Nav.Link>
             <Nav.Link href="#contact">Contact Us</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/schedule">Schedule</Nav.Link> {/* New Link */}
           </Nav>
         </Navbar.Collapse>
       </Container>
