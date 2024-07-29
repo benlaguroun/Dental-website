@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
+import SocialMedia from './components/SocialMedia';
 import Hero from './components/Hero';
 import Blog from './components/Blog';
 import OurServices from './components/OurServices';
@@ -18,7 +19,6 @@ import EmergencyCare from './pages/EmergencyCare';
 import BlogPost from './pages/BlogPost';
 import AdminPanel from './components/AdminPanel';
 import Login from './components/Login'; // Import the Login component
-import SocialMedia from './components/SocialMedia';
 import './App.css';
 import './custom.css';
 

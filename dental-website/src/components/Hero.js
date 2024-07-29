@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
 import './Hero.css';
 
-import image1 from '../images/image1.jpg';
-import image2 from '../images/image2.jpg';
-import image3 from '../images/image3.jpg';
+import image1 from '../images/hero-1.jpg';
+import image2 from '../images/hero-2.jpg';
+import image3 from '../images/hero-3.jpg';
 
 const Hero = () => {
   return (
