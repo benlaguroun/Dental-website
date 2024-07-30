@@ -17,7 +17,9 @@ import Xrays from './pages/Xrays';
 import OralSurgery from './pages/OralSurgery';
 import Orthodontics from './pages/Orthodontics';
 import EmergencyCare from './pages/EmergencyCare';
-import BlogPost from './pages/BlogPost';
+import Blog1 from './pages/Blog1'; // Import individual blog pages
+import Blog2 from './pages/Blog2';
+import Blog3 from './pages/Blog3';
 import AdminPanel from './components/AdminPanel';
 import Login from './components/Login';
 import ScheduleButton from './components/ScheduleButton'; // Import the ScheduleButton component
@@ -55,7 +57,9 @@ function App() {
           <Route path="/orthodontics" element={<Orthodontics />} />
           <Route path="/emergency-care" element={<EmergencyCare />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/blog/1" element={<Blog1 />} /> {/* Route for Blog1 */}
+          <Route path="/blog/2" element={<Blog2 />} /> {/* Route for Blog2 */}
+          <Route path="/blog/3" element={<Blog3 />} /> {/* Route for Blog3 */}
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/login" element={<Login />} />
         </Routes>

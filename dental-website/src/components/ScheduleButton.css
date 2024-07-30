@@ -2,33 +2,48 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: #007bff;
   color: white;
-  border-radius: 5px;
+  border-radius: 20px;
   text-decoration: none;
   z-index: 1000;
   transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
-  animation: pulse 2s infinite;
+  animation: bounce 2s infinite;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.schedule-button.scrolled {
-  opacity: 0.7;
+.schedule-button:before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #007bff transparent transparent transparent;
 }
 
 .schedule-button:hover {
   background-color: #0056b3;
 }
 
-/* Pulse animation */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
+.schedule-button.scrolled {
+  opacity: 0.7;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  50% {
-    transform: scale(1.1);
+  40% {
+    transform: translateY(-10px);
   }
-  100% {
-    transform: scale(1);
+  60% {
+    transform: translateY(-5px);
   }
 }
